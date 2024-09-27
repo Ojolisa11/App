@@ -16,8 +16,8 @@ genai.configure(api_key=os.getenv('API_KEY'))
 
 # Configure the database
 basedir = os.path.abspath(os.path.dirname(__file__))
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
+print(basedir)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'instance/app.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
