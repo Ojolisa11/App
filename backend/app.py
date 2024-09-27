@@ -63,6 +63,7 @@ def get_summary(lectureId):
 
     url = lecture.video
     transcript = get_transcript(url)
+    print(transcript)
 
     model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content(
