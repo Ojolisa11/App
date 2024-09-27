@@ -20,7 +20,7 @@ export default createStore({
         // define your actions here
         async fetchWeeks({ commit }) {
             try {
-                const response = await axios.get('http://localhost:5000/info');
+                const response = await axios.get('https://app-backend-86el.onrender.com/info');
                 commit('setWeeks', response.data);
             } catch (error) {
                 console.error(error);
@@ -28,7 +28,7 @@ export default createStore({
         },
         async fetchProgAssg({ commit }) {
             try {
-                const response = await axios.get('http://localhost:5000/progassg');
+                const response = await axios.get('https://app-backend-86el.onrender.com/progassg');
                 commit('setProgAssg', response.data);
             } catch (error) {
                 console.error(error);
