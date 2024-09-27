@@ -16,7 +16,7 @@ genai.configure(api_key=os.getenv('API_KEY'))
 
 # Configure the database
 basedir = os.path.abspath(os.path.dirname(__file__))
-print(basedir)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'instance/app.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
@@ -28,7 +28,6 @@ with app.app_context():
 @app.route('/info', methods=['GET'])
 def get_weeks():
     weeks = Week.query.all()
-    print(weeks)
     return jsonify([week.serialize() for week in weeks])
 
 
