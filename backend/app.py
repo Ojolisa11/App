@@ -14,8 +14,6 @@ load_dotenv()
 # Configure generative AI
 genai.configure(api_key=os.getenv('API_KEY'))
 
-port = int(os.getenv('PORT', 4000))
-
 # Configure the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -314,4 +312,4 @@ def submit_answers():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port)
+    app.run()
