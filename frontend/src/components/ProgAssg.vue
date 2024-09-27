@@ -67,7 +67,7 @@ export default {
       this.loading = true;
       try {
         const response = await axios.post(
-          "http://localhost:5000/progassg_suggestions",
+          "https://app-backend-86el.onrender.com/progassg_suggestions",
           {
             question: this.prog.question,
             code: this.code,
