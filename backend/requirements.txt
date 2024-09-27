@@ -6,3 +6,4 @@ Flask-SQLAlchemy==2.5.1
 youtube-transcript-api==0.6.0
 Werkzeug==2.0.3
 SQLAlchemy==1.4.47
+gunicorn
