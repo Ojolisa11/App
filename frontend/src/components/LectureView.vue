@@ -60,7 +60,7 @@ export default {
       const lectureId = this.$route.params.id;
       try {
         const response = await axios.get(
-          `http://localhost:5000/summary/${lectureId}`
+          `https://app-backend-86el.onrender.com/summary/${lectureId}`
         );
         this.summary = response.data;
       } catch (error) {
