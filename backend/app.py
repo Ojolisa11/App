@@ -41,8 +41,7 @@ def handle_query():
 
     lecture_names = [lecture.name for lecture in week.lectures]
 
-    system_instruction = f"Give answers in markdown. You only know information about {', '.join(
-        lecture_names)} in python. For anything else, refuse to answer. Do not spoonfeed the entire answer. Give small code snippets for examples. Try to encourage personal research for better learning."
+    system_instruction = f"Give answers in markdown. You only know information about {', '.join(lecture_names)} in python. For anything else, refuse to answer. Do not spoonfeed the entire answer. Give small code snippets for examples. Try to encourage personal research for better learning."
     print(system_instruction)
     model = genai.GenerativeModel(
         'gemini-1.5-flash', system_instruction=system_instruction
