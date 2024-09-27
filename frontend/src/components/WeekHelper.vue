@@ -54,7 +54,7 @@ export default {
     async submitQuery() {
       this.loading = true;
       try {
-        const response = await axios.post("http://localhost:5000/helper", {
+        const response = await axios.post("https://app-backend-86el.onrender.com/helper", {
           query: this.userQuery,
           weekId: this.id,
         });
