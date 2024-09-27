@@ -3,7 +3,7 @@ flask-cors==3.0.10
 google-generativeai
 python-dotenv==0.19.2
 Flask-SQLAlchemy==2.5.1
-youtube-transcript-api==0.6.0
+youtube-transcript-api
 Werkzeug==2.0.3
 SQLAlchemy==1.4.47
 gunicorn
