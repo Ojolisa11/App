@@ -28,6 +28,7 @@ with app.app_context():
 @app.route('/info', methods=['GET'])
 def get_weeks():
     weeks = Week.query.all()
+    print(weeks)
     return jsonify([week.serialize() for week in weeks])
 
 
