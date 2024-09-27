@@ -75,7 +75,7 @@ export default {
     async submitAnswers() {
       try {
         const response = await axios.post(
-          "http://localhost:5000/submit_assg",
+          "https://app-backend-86el.onrender.com/submit_assg",
           this.selectedAnswers
         );
         this.data = response.data;
